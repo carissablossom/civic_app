@@ -1,0 +1,29 @@
+<template name="listLogs">
+  <div class="row">
+		<div class="col-md-12">
+			<a class="btn btn-primary" id="btnAddLog">Add Api Log</a>
+		</div>
+	</div>
+
+  <div class="logs">
+    <h2>Api Log List</h2>
+    {{#each logs}}
+      {{ >log }}
+    {{/each}}
+  </div>
+
+  <nav>
+    <ul class="pager">
+      <li class="{{prevPageClass}}">
+        <a id="prevPage" href="{{prevPage}}">
+          <span aria-hidden="true">&larr;</span> Previous
+        </a>
+      </li>
+      <li class="{{nextPageClass}}">
+        <a id="nextPage" href="{{nextPage}}">
+          Next <span aria-hidden="true">&rarr;</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</template>
